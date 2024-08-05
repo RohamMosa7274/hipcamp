@@ -1,0 +1,339 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 
+
+<<  root  >>
+
+*/
+
+
+:root {
+    --color-orange: #E76F51;
+    --secondry-color: #F8E1DB;
+    --color-white: #fff;
+    --radial-gradient-grey: rgb(52,52,52)  radial-gradient(circle, rgba(52,52,52,1) 0%, rgba(40,40,43,1) 100%);
+    --color-dark: #3B3735;
+    --dark: #8D8D8D;
+    --primary-fonts: "Roboto", Arial, Helvetica, sans-serif;
+    --primary-fonts-md: "Roboto Medium", Arial, Helvetica, sans-serif;
+    --secondry-fonts: "Archivo Black", Arial, Helvetica, sans-serif;
+}
+
+
+/* 
+
+<<  fonts   >>
+
+*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SemiBold";
+    src: url("../fonts/Nunito/static/Nunito-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mukta Bold";
+    src: url("../fonts/Mukta/Mukta-Bold.ttf") format("truetype");
+}
+
+html {
+    box-sizing: border-box;
+    font-size:62.5%;
+
+}
+
+* , *:before , *:after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    font-family: var(--primary-fonts);
+    line-height: 1.6;
+    font-size: 1.6rem;
+    background-color: #fcefeb ;
+
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.app-content {
+    background-color: var(--color-white);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 60rem;
+}
+
+.app-content-header {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+}
+
+.app-content__title {
+    font-family:"Roboto medium" ;
+    font-size: 2.5rem;
+}
+
+
+
+.app-content__caption {
+    font-family:"SemiBold" ;
+}
+
+.app-content-main__form-title {
+    font-family: "Mukta Bold";
+}
+
+
+.app-content-main {
+    margin-bottom: 1.5rem;
+}
+
+.app-content-main__form-part {
+
+    margin-bottom: 1.5rem;
+}
+
+.app-content-main__form-input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark);
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.app-content-main__form-input-part{
+    position: relative;
+    
+}
+
+.password-input-img {
+    position: absolute;
+    right: 1rem;
+    top: 0.9rem;
+    cursor: pointer;
+}    
+
+
+.eye-icon-hide {
+    display: none;
+}
+
+
+.form-btn {
+    background: var(--radial-gradient-grey);
+    color: var(--color-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    width: 100%;
+}
+
+.form-btn:hover {
+    color: var(--color-orange);
+ }
+
+
+
+.options {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.line-wrapper {
+    position: relative;
+}
+
+.line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #cdcfd2;
+    vertical-align: middle;
+}
+
+.option__or-span {
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    padding: 0 2rem;
+    opacity: 0.8;
+}
+
+.or-option {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+
+.sign-up-google {
+    border: 0.5px solid;
+    border-radius: 5px;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.sign-up-google__caption {
+    margin-left: 1rem;
+    font-family: "Roboto Medium" ;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.app-content-have-account{
+    display: flex;
+    justify-content: center;
+}
+.app-content-have-account-link{
+    margin-left: 5px;
+    color: black;
+    transition: all 200ms ease-in-out;
+}
+.app-content-have-account-link:hover{
+    color: var(--color-orange);
+}
+
+
+@media (max-width: 310px) {
+
+    .wrapper {
+        height: auto;
+        margin: 1rem 0;
+    }
+    .app-content__title {
+        font-size: 2rem;
+    }
+    .app-content-have-account{ 
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 54rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 72rem;
+    }
+    .app-content__title {
+        font-size: 3rem;
+    }
+    .app-content__caption {
+        font-size: 2rem;
+    }
+    .app-content-main__form-input {
+        font-size: 2rem;
+    }
+    .password-input-img {
+        top: 1rem;
+    }
+    .sign-up-google__caption {
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 96rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 114rem;
+    }
+}
+
+@media (min-width: 1400px) {
+ 
+    .container {
+        width: 137rem;
+    }
+}
+    

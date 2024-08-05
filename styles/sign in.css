@@ -1,0 +1,359 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 
+
+<<  root  >>
+
+*/
+
+
+:root {
+    --color-orange: #E76F51;
+    --secondry-color: #F8E1DB;
+    --color-white: #fff;
+    --radial-gradient-grey: rgb(52,52,52)  radial-gradient(circle, rgba(52,52,52,1) 0%, rgba(40,40,43,1) 100%);
+    --color-dark: #3B3735;
+    --dark: #8D8D8D;
+    --primary-fonts: "Roboto", Arial, Helvetica, sans-serif;
+    --primary-fonts-md: "Roboto Medium", Arial, Helvetica, sans-serif;
+    --secondry-fonts: "Archivo Black", Arial, Helvetica, sans-serif;
+}
+
+
+/* 
+
+<<  fonts   >>
+
+*/
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Archivo Black";
+    src: url("../fonts/Archivo/Archivo-Black.ttf") format("truetype");
+}
+
+html {
+    box-sizing: border-box;
+    font-size:62.5%;
+    /* scroll-behavior: smooth; */
+    /*
+    if  scroll behavior not work, visit this page and enable smoothscrolling . 
+    chrome://flags/#smooth-scrolling 
+     */
+}
+
+* , *:before , *:after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    font-family: var(--primary-fonts);
+    line-height: 1.6;
+    font-size: 1.6rem;
+    background-color: #fcefeb ;
+}
+
+
+.sign-in-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.sign-in-page {
+    background-color: var(--color-white);
+    width: 57rem ;
+    text-align: center ;
+    border-radius: 1.5rem;
+    padding: 3rem;
+}
+
+
+.sign-in-page__banner {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+.sign-in-page__content {
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.sign-in-page__title {
+    font-family: var(--primary-fonts-md);
+    font-size: 1.8rem;
+}
+
+
+.sign-in-app__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+
+.sign-in-app__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem ;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-grow: 1;
+    width: 100%;
+    border: 2px solid var(--dark);
+    border-radius: 1rem;
+}
+
+
+.sign-in-option__line-wrapper {
+    position: relative;
+}
+
+.sign-in-option {
+    margin-bottom: 1.5rem;
+
+}
+
+.sign-in-option__line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #cdcfd2;
+    vertical-align: middle;
+}
+
+
+.sign-in-option__content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.sign-in-option__or-span {
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    padding: 0 2rem;
+    opacity: 0.8;
+}
+
+
+
+
+ .sign-in-page-form-parts {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+ }
+
+ .sign-in-page-form-part {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+ }
+
+
+ .form-part__title {
+    font-family: var(--primary-fonts-md);
+ }
+
+.form-part__input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark);
+    font-size: 2rem;
+}
+
+.form-part__input--pointer {
+    cursor: pointer;
+
+}
+
+.form-part__input--pointer:hover {
+    border-color: #E76F51;
+}
+
+#password-input{
+    position: relative;
+}
+
+#password-input .form-part__input {
+    width: 100%;
+}
+
+.r {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.eye-icon-hide {
+    display: none;
+}
+
+ .remmeber-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+ }
+
+
+ .form-part__link {
+    text-decoration: underline;
+    color: var(--color-dark);
+    transition: all 200ms ease-in-out;
+ }
+
+ .form-part__link:hover {
+    color: var(--color-orange);
+ } 
+
+
+ .form-btn {
+    background: var(--radial-gradient-grey);
+    color: var(--color-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+ .form-btn:hover {
+    color: var(--color-orange);
+ }
+ 
+ .have-acc {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.have-acc__link {
+   color: var(--color-dark);
+   font-family: var(--primary-fonts-md);
+   transition: all 200ms ease-in-out;
+}
+.have-acc__link:hover {
+   color: var(--color-orange);
+}
+
+
+
+
+
+@media screen and (max-width: 1400px) { 
+    
+    .sign-in-page  {
+        width: 52rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) { 
+    
+    .sign-in-page {
+        width: 50rem;
+        margin:0 3rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) { 
+
+    .sign-in-page {
+        width: 42rem;
+    }
+    .q {
+        font-size: 1.4rem;
+    }
+    .s__wrapper {
+        
+        font-size: 1.4rem;
+    }
+    .sign-in-page__banner a > svg {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 350px) { 
+    .sign-in-page {
+        width: 32rem;
+    }
+}
